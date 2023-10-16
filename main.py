@@ -52,6 +52,7 @@ while True:
         current_op = []
         current_num = []
         window['-TEXT-'].update("")
+        # added clear
 
     if event == 'Enter':
         current_op.append(''.join(current_num))
