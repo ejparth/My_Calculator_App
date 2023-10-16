@@ -5,7 +5,7 @@ def create_window(theme):
     sg.theme(theme)
     sg.set_options(font='Franklin 10')
     layout = [
-        [sg.Text('', font='Franklin 26', expand_x=True, justification='right', pad=(10, 20), right_click_menu= theme_menu, key = '-TEXT-')],
+        [sg.Text('', font='Franklin 26', expand_x=True, justification='right', pad=(10, 20), right_click_menu= theme_menu, key ='-TEXT-')],
         [sg.Button('Clear', expand_x=True, size=(6, 3)), sg.Button('Enter', expand_x=True, size=(6, 3))],
         [sg.Button('7', size=(6, 3), key='-SEVEN-'), sg.Button('8', size=(6, 3)), sg.Button('9', size=(6, 3)),
          sg.Button('*', size=(6, 3))],
@@ -51,6 +51,7 @@ while True:
     if event == 'Clear':
         current_op = []
         current_num = []
+        window['-TEXT-'].update("")
 
     if event == 'Enter':
         current_op.append(''.join(current_num))
